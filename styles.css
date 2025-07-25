@@ -1,0 +1,104 @@
+/* *{
+    outline: 1px solid red;
+} */
+body,ul{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f8f8;
+    padding: 2rem 6rem;
+    border-bottom: 1px solid lightblue;
+}
+
+.navbar-logo{
+    display: flex;
+    flex-basis: 35%;
+    font-weight: bold;
+    font-size: 3rem;
+    color: #333;
+    justify-content: flex-start;
+    font-family: "Brush Script MT";
+    
+}
+
+.navbar-links{
+    flex-basis: 60%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.navbar-links li{
+    margin-left: 30px;
+    font-size: 1.5rem;
+}
+
+.navbar-links a{
+    text-decoration: none;
+    color: #555;
+    padding: 8px 15px;
+    transition: color 0.3s;
+}
+
+.navbar-links a:hover{
+    color: #000;
+}
+
+.navbar-links .bordered-link a{
+    border: 2px solid #333;
+    border-radius: 5px;
+    color: #333;
+    font-weight: bold;
+}
+
+.navbar-links .bordered-link a:hover{
+    background-color: #333;
+    color: #fff;
+}
+
+.AboutMe{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(235, 239, 241);
+    padding: 8rem 4rem;
+    border-bottom: 1px solid lightblue;
+}
+
+.abt-content{
+    flex-basis: 50%;
+    flex-direction: column;
+    justify-content: space-between;
+    display: flex;
+    align-self: stretch;
+    }
+
+.abt-title{
+    display: flex;
+    flex-basis: 20%;
+    font-size: 2rem;
+    justify-content: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.abt-paragraph{
+    flex-basis: 80%;
+    display: flex;
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    justify-content: center;
+    line-height: 1.7;
+}
+
+.abt-img {
+    flex-basis: 50%;
+    min-height: 200px;
+    outline: 1px solid red ;
+}
