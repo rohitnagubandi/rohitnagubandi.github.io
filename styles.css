@@ -1,6 +1,10 @@
 /* *{
     outline: 1px solid red;
 } */
+
+/* p{
+    outline: 1px solid red;
+} */
 body,ul{
     margin: 0;
     padding: 0;
@@ -12,7 +16,7 @@ body,ul{
     justify-content: space-between;
     align-items: center;
     background-color: #f8f8f8;
-    padding: 2rem 6rem;
+    padding: 0.5rem 6rem;
     border-bottom: 1px solid lightblue;
 }
 
@@ -20,7 +24,7 @@ body,ul{
     display: flex;
     flex-basis: 35%;
     font-weight: bold;
-    font-size: 3rem;
+    font-size: 2rem;
     color: #333;
     justify-content: flex-start;
     font-family: "Brush Script MT";
@@ -37,7 +41,7 @@ body,ul{
 
 .navbar-links li{
     margin-left: 30px;
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
 .navbar-links a{
@@ -68,7 +72,7 @@ body,ul{
     justify-content: space-between;
     align-items: center;
     background-color: rgb(235, 239, 241);
-    padding: 8rem 4rem;
+    padding: 2rem 4rem;
     border-bottom: 1px solid lightblue;
 }
 
@@ -83,7 +87,7 @@ body,ul{
 .abt-title{
     display: flex;
     flex-basis: 20%;
-    font-size: 2rem;
+    font-size: 1.3rem;
     justify-content: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
@@ -91,14 +95,72 @@ body,ul{
 .abt-paragraph{
     flex-basis: 80%;
     display: flex;
-    font-size: 1.5rem;
-    padding: 1rem 2rem;
+    font-size: 1rem;
+    padding: 0.1rem 2rem;
     justify-content: center;
     line-height: 1.7;
+    text-align: justify;
 }
 
 .abt-img {
     flex-basis: 50%;
     min-height: 200px;
     outline: 1px solid red ;
+}
+
+.Blog-Posts{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f8f8;
+    padding: 2rem 4rem;
+    /* border-bottom: 1px solid lightblue; */
+}
+
+.Blog-Posts-List{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: #f8f8f8;
+    padding: 1rem 1rem;
+    /* border-bottom: 1px solid lightblue; */
+}
+
+.BP-1{
+    display: flex;
+    background-color: #f8f8f8;
+    padding: 10rem 37rem;
+    margin-bottom: 30px;
+
+    border: 2px solid rgba(69, 59, 59, 0.144); /* A light border helps define the edge */
+    border-radius: 12px;
+    box-shadow: 2px 3px 0 #5142423a; /* This creates the solid "bottom edge" */
+    position: relative; /* Needed for the active state */
+    top: 0;
+    transition: top 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
+}
+
+.BP-1:active {
+    top: 2px; /* Moves the button down */
+    box-shadow: 0 2px 0 #cccccc00; /* Reduces the shadow to complete the effect */
+}
+
+.BP-2{
+    display: flex;
+    background-color: #f8f8f8;
+    padding: 10rem 37rem;
+    margin-bottom: 30px;
+
+    border: 2px solid rgba(69, 59, 59, 0.144); /* A light border helps define the edge */
+    border-radius: 12px;
+    box-shadow: 2px 3px 0 #5142423a; /* This creates the solid "bottom edge" */
+    position: relative; /* Needed for the active state */
+    top: 0;
+    transition: top 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
+}
+
+.BP-2:active {
+    top: 2px; /* Moves the button down */
+    box-shadow: 0 2px 0 #cccccc00; /* Reduces the shadow to complete the effect */
 }
