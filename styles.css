@@ -1,23 +1,26 @@
-/* *{
-    outline: 1px solid red;
-} */
-
-/* p{
-    outline: 1px solid red;
-} */
+:root{
+    --bg-color-light: #f8f8f8;
+    --bg-color-accent: rgb(235, 239, 241);
+    --text-color-primary: #333;
+    --text-color-secondary: #555;
+    --border-color: lightblue;
+    --font-primary: Arial, Helvetica, sans-serif;
+    --font-heading: Georgia, 'Time New Roman', Times, serif;
+    --font-logo: "Brush Script MT", cursive;
+}
 body,ul{
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--font-primary);
 }
 
 .navbar{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #f8f8f8;
+    background-color: var(--bg-color-light);
     padding: 0.5rem 6rem;
-    border-bottom: 1px solid lightblue;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .navbar-logo{
@@ -25,9 +28,9 @@ body,ul{
     flex-basis: 35%;
     font-weight: bold;
     font-size: 2rem;
-    color: #333;
+    color: var(--text-color-primary);
     justify-content: flex-start;
-    font-family: "Brush Script MT";
+    font-family: var(--font-logo);
     
 }
 
@@ -46,7 +49,7 @@ body,ul{
 
 .navbar-links a{
     text-decoration: none;
-    color: #555;
+    color: var(--text-color-secondary);
     padding: 8px 15px;
     transition: color 0.3s;
 }
@@ -56,14 +59,14 @@ body,ul{
 }
 
 .navbar-links .bordered-link a{
-    border: 2px solid #333;
+    border: 2px solid var(--text-color-primary);
     border-radius: 5px;
-    color: #333;
+    color: var(--text-color-primary);
     font-weight: bold;
 }
 
 .navbar-links .bordered-link a:hover{
-    background-color: #333;
+    background-color: var(--text-color-primary);
     color: #fff;
 }
 
@@ -71,9 +74,9 @@ body,ul{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(235, 239, 241);
+    background-color: var(--bg-color-accent);
     padding: 2rem 4rem;
-    border-bottom: 1px solid lightblue;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .abt-content{
@@ -89,7 +92,7 @@ body,ul{
     flex-basis: 20%;
     font-size: 1.3rem;
     justify-content: center;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: var(--font-heading);
 }
 
 .abt-paragraph{
@@ -107,60 +110,91 @@ body,ul{
     min-height: 200px;
     outline: 1px solid red ;
 }
-
-.Blog-Posts{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f8f8f8;
+.blog-section{
     padding: 2rem 4rem;
-    /* border-bottom: 1px solid lightblue; */
+    background-color: var(--bg-color-light);
 }
 
-.Blog-Posts-List{
+.section-title{
+    text-align: center;
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    color: var(--text-color-primary);
+    margin-bottom: 2rem;
+}
+
+.blog-post-list{
+    max-width: 1000px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    background-color: #f8f8f8;
-    padding: 1rem 1rem;
-    /* border-bottom: 1px solid lightblue; */
+    gap: 2rem;
 }
 
-.BP-1{
+.blog-card{  
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 4px 6px rgb(0,0,0,0.05);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+.blog-card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgb(0,0,0,0.1);
+}
+
+.card-header{
     display: flex;
-    background-color: #f8f8f8;
-    padding: 10rem 37rem;
-    margin-bottom: 30px;
-
-    border: 2px solid rgba(69, 59, 59, 0.144); /* A light border helps define the edge */
-    border-radius: 12px;
-    box-shadow: 2px 3px 0 #5142423a; /* This creates the solid "bottom edge" */
-    position: relative; /* Needed for the active state */
-    top: 0;
-    transition: top 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
+    justify-content: space-between;
+    align-items: baseline;
+    border-bottom: 1px solid #eee;
+    margin: 1rem;
+    padding-bottom: 1rem;
 }
 
-.BP-1:active {
-    top: 2px; /* Moves the button down */
-    box-shadow: 0 2px 0 #cccccc00; /* Reduces the shadow to complete the effect */
+.card-title{
+    margin: 0;
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
 }
 
-.BP-2{
-    display: flex;
-    background-color: #f8f8f8;
-    padding: 10rem 37rem;
-    margin-bottom: 30px;
-
-    border: 2px solid rgba(69, 59, 59, 0.144); /* A light border helps define the edge */
-    border-radius: 12px;
-    box-shadow: 2px 3px 0 #5142423a; /* This creates the solid "bottom edge" */
-    position: relative; /* Needed for the active state */
-    top: 0;
-    transition: top 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
+.card-title a{
+    text-decoration: none;
+    color: var(--text-color-primary);
 }
 
-.BP-2:active {
-    top: 2px; /* Moves the button down */
-    box-shadow: 0 2px 0 #cccccc00; /* Reduces the shadow to complete the effect */
+.card-title a:hover{
+    text-decoration: underline;
+}
+
+.card-date{
+    margin: 0;
+    color: var(--text-color-secondary);
+    font-style: italic;
+    white-space: nowrap;
+    margin-left: 1rem;
+}
+
+.card-excerpt p{
+    margin: 0;
+    line-height: 1.6;
+    color: var(--text-color-secondary);
+}
+
+
+.transition-scale {
+  transform: scale(1);
+  opacity: 1;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+html.is-animating .transition-scale {
+  transform: scale(0.95);
+  opacity: 0;
+}
+
+html.is-animating nav{
+    opacity: 0.3;
+    transition: opacity 0.3s ease;
 }

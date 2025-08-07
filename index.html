@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Homepage</title>
+    <script defer src="https://unpkg.com/swup@4"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -13,41 +14,62 @@
         </div>       
         
         <ul class="navbar-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="pages/about.html">About</a></li>
-            <li><a href="pages/currentprojects.html">Current Projects</a></li>
-            <li class="bordered-link"><a href="#">Contacts</a></li>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/pages/about.html">About</a></li>
+            <li><a href="/pages/currentprojects.html">Current Projects</a></li>
+            <li class="bordered-link"><a href="#">Contact Me</a></li>
         </ul>
     </nav>
-    
-    <section class="AboutMe">
-        <div class="abt-content">
-            <div class="abt-title">About this website</div>
-            <div class="abt-paragraph">
-                <p>Welcome to my personal space online! This site is designed to give you a snapshot of who I am and what I'm working on. For a look into my background, upbringing, and educational journey, head over to the About Me page. The heart of this website is the Current Projects section, where you'll find a detailed look at the personal and academic work I'm passionate about. If you want the latest and greatest about me feel free to scroll down and find some blog posts. You'll also find a Contact page to get in touch. Thanks for stopping by!</p>
+    <main id="swup" class="transition-scale">
+        <section class="AboutMe">
+            <div class="abt-content">
+                <div class="abt-title">About this website</div>
+                <div class="abt-paragraph">
+                    <p>Welcome to my personal space online! This site is designed to give you a snapshot of who I am and what I'm working on. For a look into my background, upbringing, and educational journey, head over to the About Me page. The heart of this website is the Current Projects section, where you'll find a detailed look at the personal and academic work I'm passionate about. If you want the latest and greatest about me feel free to scroll down and find some blog posts. You'll also find a Contact page to get in touch. Thanks for stopping by!</p>
+                </div>
             </div>
-        </div>
 
-        <div class="abt-img">
-            <a href=""><img src="" alt=""></a>
-        </div>
-    </section>
-
-    <section class="Blog-Posts">
-        <div class="Blog-Posts-List">
-            <div class="BP-1">
-                <div class="BP-1-T"></div>
-                <div class="BP-1-P"></div>
-                <div class="BP-1-D"></div>
+            <div class="abt-img">
+                <a href=""><img src="" alt=""></a>
             </div>
-            <div class="BP-2">
-                <div class="BP-2-T"></div>
-                <div class="BP-2-P"></div>
-                <div class="BP-2-D"></div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    
+        <section class="blog-section">
+            <h2 class="section-title">Latest Posts</h2>
+            <div class="blog-post-list">
+                <article class="blog-card">
+                    <div class="card-header">
+                        <h3 class="card-title"><a href="#">My First Blog Post</a></h3>
+                        <p class="card-date">August 6th, 2025</p>
+                    </div>
+                    <div class="card-excerpt">
+                        <p>This is the first post on my new blog! I'm excited to share my thoughts on technology, projects, and life. Stay tuned for more content coming soon.</p>
+                    </div>
+                </article>
+            
+                <article class="blog-card">
+                    <div class="card-header">
+                        <h3 class="card-title"><a href="#">My First Blog Post</a></h3>
+                        <p class="card-date">August 7th, 2025</p>
+                    </div>
+                    <div class="card-excerpt">
+                        <p>This is the first post on my new blog! I'm excited to share my thoughts on technology, projects, and life. Stay tuned for more content coming soon.</p>
+                    </div>
+                </article>            
+            </div>
+        </section>
+    </main>
+
+
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        if (window.Swup) {
+        const swup = new Swup();
+        } else {
+        console.error("Swup failed to load.");
+        }
+    });
+    </script>
+
 </body>
 </html>
