@@ -39,7 +39,7 @@ function initSlideshow() {
     }
 
     function resetTimer() {
-        clearInterval(timer); // Clear previous timer
+        clearInterval(timer);
         timer = setInterval(() => nextSlide(1), 3000);
     }
 
