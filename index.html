@@ -68,13 +68,16 @@
 
 
     <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        if (window.Swup) {
-        const swup = new Swup();
-        } else {
-        console.error("Swup failed to load.");
+        function init() {
+            if (!window.Swup) {
+                console.error("Swup failed to load.");
+                return;
+            }
+            const swup = new Swup();
+            initSlideshow();
+            swup.hooks.on('page:view', initSlideshow);
         }
-    });
+        document.addEventListener('DOMContentLoaded', init);
     </script>
 
 </body>

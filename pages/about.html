@@ -6,6 +6,7 @@
     <title>About Me</title>
     <script defer src="https://unpkg.com/swup@4"></script>
     <link rel="stylesheet" href="../styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <nav class="navbar">
@@ -71,7 +72,10 @@
     document.addEventListener('DOMContentLoaded', () => {
         if (window.Swup) {
         const swup = new Swup();
-        } else {
+        initSlideshow();
+        swup.hooks.on('page:view',initSlideshow);
+
+    } else {
         console.error("Swup failed to load.");
         }
     });
